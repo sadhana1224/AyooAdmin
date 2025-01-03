@@ -1,0 +1,28 @@
+1. Add User
+2. Promocode- code is not creat
+3. Appt Cancellation
+4.AddApptAditi30Mins
+5.AddApptAditi60Mins
+6. AddAppointmentVikram
+7.AddApptTilottama30Mins
+8.AddApptTilottama60Mins
+9.AddAppointmentAnam50Mins
+10. Patient details edit- Personal Profile--//working- need time for date, Personal doctor -done-- date fixed in family table check there- fix other programs also
+11. Patient detaisl edit- Reset pwd link
+12.patient Details- family and relationship Table-
+13.patient Details- Legal docs and Upload Document
+14.Patient Detials-MedicalHistory- vitals- not commpleted- error last 4 lines check
+ ---PatientDetailsMHistoryMenstrual
+ ----PatientDetailsMHistoryALL(known allergy to Vaccination record)
+ ----MedicalHistoryEditTest
+ 15. Patient Details- Appointments- Special Pricing-Add, edit,delete- All Working
+ 16.PatientDetailsAddAppt
+ 17.Appointment List- Filters
+   --Doctor name- done
+   --Patient name- done
+   --Case id- done
+   -- Phone num- done
+   --Appt status- done
+  18. All Appointments
+  19.AllPatientsFilters
+  20.AllpatientsAddUser
