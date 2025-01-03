@@ -1,5 +1,5 @@
 1. Add User
-2. Promocode- code is not creat
+2. Promocode-
 3. Appt Cancellation
 4.AddApptAditi30Mins
 5.AddApptAditi60Mins
@@ -26,3 +26,8 @@
   18. All Appointments
   19.AllPatientsFilters
   20.AllpatientsAddUser
+  21.ApptListReschedule
+  22.ApptListToggleType
+  23.ApptListNoShowCompletedBooked
+  24.DoctorAddSlot-- Pending
+  25. Add Doctor

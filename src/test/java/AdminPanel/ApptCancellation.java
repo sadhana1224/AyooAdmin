@@ -24,8 +24,9 @@ public class ApptCancellation {
 		driver.findElement(By.xpath("(//span[contains(text(),'Appointments')])[1]")).click();
 		driver.findElement(By.xpath("(//span[contains(text(),'Appointments')])[3]")).click();
 		Select sel=new Select(driver.findElement(By.xpath("//select[@data-testid='filter-selector']")));
-		//filter by-Cancellation
-		sel.selectByIndex(1);
+		//filter by-Patient name
+		sel.selectByIndex(2);
+		driver.findElement(By.xpath("//input[@placeholder='Enter Name']")).sendKeys("Sixo");
 		
 		WebElement filter=driver.findElement(By.xpath("((//div[@class='booking-status-container'])//select)[1]"));
 		filter.click();

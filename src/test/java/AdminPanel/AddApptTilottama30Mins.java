@@ -37,7 +37,7 @@ public class AddApptTilottama30Mins {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement dateInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("apptslot")));
 		dateInput.click();
-		WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'18')]")));
+		WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'3')]")));
 		dateToSelect.click();
 		Select spl=new Select(driver.findElement(By.xpath("//select[@id='specialization']")));
 		spl.selectByIndex(0);
