@@ -31,3 +31,11 @@
   23.ApptListNoShowCompletedBooked
   24.DoctorAddSlot-- Pending
   25. Add Doctor
+  26. PiiCheckSingleAcct
+  27. PiiCheckMultipleAccts- Pending
+  28. AllDoctorsEditDelete-- done
+  29.Facilities
+  --AyooClinic- done
+  --AyooClinicInfo- done
+  --AyooServiceCatalogue
+  --AyooAllServices

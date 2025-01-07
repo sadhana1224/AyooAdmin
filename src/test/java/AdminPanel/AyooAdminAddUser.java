@@ -13,12 +13,12 @@ public class AyooAdminAddUser {
 	public static void main(String[] args) throws InterruptedException {
 
 		driver=new ChromeDriver();
-		driver.get("https://dev.ayoo.care/ayooadmin");
+		driver.get("https://uat.ayoo.care/ayooadmin");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		driver.findElement(By.id("username")).sendKeys("admin@ayoo.care");
-		driver.findElement(By.id("password")).sendKeys("AdW!n@Ay00"); //AdW!n@Ay00 //ayoo-admin-uat!
+		driver.findElement(By.id("password")).sendKeys("ayoo-admin-uat!"); //AdW!n@Ay00 //ayoo-admin-uat!
 
 		driver.findElement(By.id("loginbtn")).click();
 
