@@ -38,7 +38,7 @@ public class AddAppointmentVikram{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement dateInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("apptslot")));
 		dateInput.click();
-		WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'18')]")));
+		WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'7')]")));
 		dateToSelect.click();
 		Select spl=new Select(driver.findElement(By.xpath("//select[@id='specialization']")));
 		spl.selectByIndex(0);
@@ -46,7 +46,7 @@ public class AddAppointmentVikram{
 //Time slot- 20 mins
 		WebElement timeslotDropdown = driver.findElement(By.xpath("//select[@id='timeslot']"));
 		Select timeslot = new Select(timeslotDropdown);
-		timeslot.selectByVisibleText("12:20 PM");
+		timeslot.selectByVisibleText("06:40 PM");
 		Thread.sleep(2000);
 
 //60 mins slot
@@ -68,7 +68,7 @@ public class AddAppointmentVikram{
 		//	payment.clear();
 		//	payment.sendKeys("0");
 		//promocode
-		driver.findElement(By.id("applyPromoCode")).sendKeys("Ayoo200");
+		driver.findElement(By.id("applyPromoCode")).sendKeys("SAD300");
 		driver.findElement(By.xpath("//button[contains(text(),'Apply')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.id("book-appointment-submit")).click();

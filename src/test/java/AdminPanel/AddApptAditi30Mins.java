@@ -38,7 +38,7 @@ public class AddApptAditi30Mins {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement dateInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("apptslot")));
 		dateInput.click();
-		WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'3')]")));
+		WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'7')]")));
 		dateToSelect.click();
 		Select spl=new Select(driver.findElement(By.xpath("//select[@id='specialization']")));
 		spl.selectByIndex(0);
@@ -46,7 +46,7 @@ public class AddApptAditi30Mins {
 //Time slot- 3o mins
 		WebElement timeslotDropdown = driver.findElement(By.xpath("//select[@id='timeslot']"));
 		Select timeslot = new Select(timeslotDropdown);
-		timeslot.selectByVisibleText("09:30 PM");
+		timeslot.selectByVisibleText("06:30 PM");
 		Thread.sleep(2000);
 
 //60 mins slot
