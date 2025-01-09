@@ -28,10 +28,10 @@ public class PatientProfileFamilyTable {
         driver.findElement(By.xpath("(//span[contains(text(),'Patients')])[1]")).click();
         driver.findElement(By.xpath("//span[contains(text(),'All Patients ')]")).click();
         WebElement patientName = driver.findElement(By.xpath("//input[@placeholder='Enter Name']"));
-        patientName.sendKeys("Aditiya");
+        patientName.sendKeys("Aaru");
         Thread.sleep(2000);
         // we can change the name as per our need
-        driver.findElement(By.xpath("//td[@data-testid='patientName']//a[contains(text(),'Aditiya Rao')]")).click();
+        driver.findElement(By.xpath("//td[@data-testid='patientName']//a[contains(text(),'Aaru Sathya')]")).click();
         Thread.sleep(2000);
 
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
@@ -42,7 +42,7 @@ public class PatientProfileFamilyTable {
     // driver.findElement(By.xpath("//div[@class='familyIcons']")).click();
         //if person has already relative use this line of code
         driver.findElement(By.xpath("//body/div[@id='wrapper']/div[@id='root']/div[2]/div[3]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/form[1]/div[1]/div[1]/img[1]")).click();
-        driver.findElement(By.xpath("//input[@placeholder='first name']")).sendKeys("San");
+        driver.findElement(By.xpath("//input[@placeholder='first name']")).sendKeys("Sani");
         driver.findElement(By.xpath("//input[@placeholder='last name']")).sendKeys("S");
         WebElement gen=driver.findElement(By.xpath("(//td[@class='familyEditMode']//select)[1]"));
         gen.click();
@@ -55,9 +55,9 @@ public class PatientProfileFamilyTable {
         relation.selectByIndex(3);
         driver.findElement(By.xpath("(//input[@type='date'])[2]")).sendKeys("12/18/1996");
 
-        driver.findElement(By.xpath("//input[@class='FamilyDetails-mobile_Input']")).sendKeys("5630047890");
+        driver.findElement(By.xpath("//input[@class='FamilyDetails-mobile_Input']")).sendKeys("5630117890");
 
-        driver.findElement(By.xpath("(//input[@type='email'])[2]")).sendKeys("jocaccso1170@kelenson.com");
+        driver.findElement(By.xpath("(//input[@type='email'])[2]")).sendKeys("jocaccso51170@kelenson.com");
 
         //Emergency contact
         WebElement ec=driver.findElement(By.xpath("(//td[@class='familyEditMode']//select)[3]"));

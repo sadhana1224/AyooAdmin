@@ -22,9 +22,9 @@ public class PatientPersonalProfileEdit {
         driver.findElement(By.xpath("(//span[contains(text(),'Patients')])[1]")).click();
         driver.findElement(By.xpath("//span[contains(text(),'All Patients ')]")).click();
         WebElement patientName=driver.findElement(By.xpath("//input[@placeholder='Enter Name']"));
-        patientName.sendKeys("Aathu");
+        patientName.sendKeys("Aaru");
         // we can change the name as per our need
-        driver.findElement(By.xpath("//td[@data-testid='patientName']//a[contains(text(),'Aathu')]")).click();
+        driver.findElement(By.xpath("//td[@data-testid='patientName']//a[contains(text(),'Aaru Sathya')]")).click();
         Thread.sleep(2000);
         //personal profile Edit
         driver.findElement(By.xpath("//body/div[@id='wrapper']/div[@id='root']/div[2]/div[3]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/img[1]")).click();

@@ -31,7 +31,7 @@ public class PromoCode {
 		//Create Promo code
 		driver.findElement(By.xpath("(//span[contains(text(),'Promo Code')])[1]")).click();
 		driver.findElement(By.xpath("(//span[contains(text(),'Create Promo Code')])[1]")).click();
-		driver.findElement(By.xpath("//label[text()='Promotion Code'][1]/following-sibling::input")).sendKeys("SAD300");
+		driver.findElement(By.xpath("//label[text()='Promotion Code'][1]/following-sibling::input")).sendKeys("SAD400");
 		driver.findElement(By.xpath("//label[text()='Promotion Name'][1]/following-sibling::input")).sendKeys("Discount");
 		driver.findElement(By.xpath("//label[text()='Promotion Description'][1]//following-sibling::input")).sendKeys("Testing");
 		driver.findElement(By.xpath("//label[text()='Discount Type']//following-sibling::select")).click();

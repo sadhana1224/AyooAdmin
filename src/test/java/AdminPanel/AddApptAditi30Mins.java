@@ -3,10 +3,7 @@ package AdminPanel; //Working
 import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -42,12 +39,40 @@ public class AddApptAditi30Mins {
 		dateToSelect.click();
 		Select spl=new Select(driver.findElement(By.xpath("//select[@id='specialization']")));
 		spl.selectByIndex(0);
-
-//Time slot- 3o mins
+/*
+//Time slot- 3o mins-- this code also crct
 		WebElement timeslotDropdown = driver.findElement(By.xpath("//select[@id='timeslot']"));
 		Select timeslot = new Select(timeslotDropdown);
 		timeslot.selectByVisibleText("06:30 PM");
-		Thread.sleep(2000);
+		Thread.sleep(2000);  */
+
+		WebElement timeslotDropdown = driver.findElement(By.xpath("//select[@id='timeslot']"));
+		Select timeslot = new Select(timeslotDropdown);
+
+		boolean slotSelected = false;
+		String desiredSlot = "11:00 PM";
+		List<WebElement> options = timeslot.getOptions();
+
+		for (WebElement option : options) {
+			String slotText = option.getText();
+			try {
+				// Try to select the desired or next available slot
+				if (slotText.equals(desiredSlot) || !slotSelected) {
+					timeslot.selectByVisibleText(slotText);
+					slotSelected = true;
+					System.out.println("Selected time slot: " + slotText);
+					Thread.sleep(2000); // Optional, for demonstration
+					break;
+				}
+			} catch (NoSuchElementException e) {
+				System.out.println("Desired time slot not available: " + desiredSlot);
+				desiredSlot = ""; // Reset desired slot to try the next one
+			}
+		}
+
+		if (!slotSelected) {
+			System.out.println("No available time slots to select.");
+		}
 
 //60 mins slot
 	/*	driver.findElement(By.xpath("//div//input[@id='60-slot']")).click();*/
@@ -68,11 +93,13 @@ public class AddApptAditi30Mins {
 		//	payment.clear();
 		//	payment.sendKeys("0");
 		//promocode
-		driver.findElement(By.id("applyPromoCode")).sendKeys("SAD300");
+		driver.findElement(By.id("applyPromoCode")).sendKeys("SAD400");
 		driver.findElement(By.xpath("//button[contains(text(),'Apply')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.id("book-appointment-submit")).click();
 
+		Thread.sleep(9000);
+		driver.quit();
 	}
 
 }
